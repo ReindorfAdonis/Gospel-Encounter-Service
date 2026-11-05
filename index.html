@@ -39,7 +39,7 @@
   /* ---------- stacking pages, with depth ---------- */
   .page{
     position:sticky;top:0;
-    height:100vh;height:100svh;
+    height:100vh;height:100svh;height:100dvh;
     overflow:hidden;
     display:flex;flex-direction:column;
     padding:34px 0 96px;
@@ -303,6 +303,7 @@
   .end-actions{margin-top:24px;display:flex;flex-direction:column;gap:10px;align-items:center}
   .end-actions .cta{margin:0;text-decoration:none;display:inline-block}
   .end-actions .ghost{background:transparent;color:var(--cream);border:2px solid var(--cream)}
+  .social-line{font-size:1rem;line-height:1.5;max-width:28ch;opacity:.92;margin:0 0 4px}
   .tag{margin-top:26px;font-size:.9rem;opacity:.85}
   .glow{position:absolute;left:50%;top:50%;width:140vmin;height:140vmin;translate:-50% -50%;border-radius:50%;
     background:radial-gradient(circle,rgba(240,180,69,.35),rgba(240,180,69,0) 62%);animation:breathe 5s ease-in-out infinite;pointer-events:none}
@@ -798,7 +799,9 @@
     <h2 class="split">Come worship with us</h2>
     <p class="lede">There is a seat for you in the family. Bring a friend.</p>
     <div class="end-actions">
-      <a class="cta" id="share" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <p class="social-line">Get to know us more through our social media platforms</p>
+      <a class="cta" href="https://www.instagram.com/livingwaterscouncil?rpxt=ajlsMzR1NndzbXh4&amp;utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+      <a class="cta" href="https://www.tiktok.com/@livingwaterscouncil?_r=1&amp;_t=ZS-9B8fznaC1pq" target="_blank" rel="noopener">TikTok</a>
       <a class="cta ghost" href="#pages" id="top">Back to the start</a>
     </div>
     <p class="tag">The First Love Church, Gospel Encounter Service</p>
@@ -1938,7 +1941,6 @@ $('top').addEventListener('click', e => {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
 });
-$('share').href = 'https://wa.me/?text=' + encodeURIComponent('Come and see The First Love Church, Gospel Encounter Service: ' + location.href);
 
 /* ===================== THE WELCOME GATE ===================== */
 const gate = $('gate'), sayEl = $('say'), liveEl = $('sayLive'), actions = $('gateActions');
